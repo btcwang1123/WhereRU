@@ -9,13 +9,12 @@ struct MainTabBar: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            TabBarButton(tab: .map, label: "聯絡人", systemImage: "person.2.fill", activeTab: $activeTab)
-            TabBarButton(tab: .chat, label: "裝置", systemImage: "macbook.and.iphone", activeTab: $activeTab)
-            TabBarButton(tab: .notification, label: "物品", systemImage: "square.grid.2x2.fill", activeTab: $activeTab)
-            TabBarButton(tab: .profile, label: "本人", systemImage: "location.fill", activeTab: $activeTab)
+            TabBarButton(tab: .map, label: "地圖", systemImage: "map.fill", activeTab: $activeTab)
+            TabBarButton(tab: .chat, label: "聊天", systemImage: "bubble.left.and.bubble.right.fill", activeTab: $activeTab)
+            TabBarButton(tab: .notification, label: "通知", systemImage: "bell.fill", activeTab: $activeTab)
+            TabBarButton(tab: .profile, label: "個人", systemImage: "person.crop.circle.fill", activeTab: $activeTab)
         }
-        .padding(.top, 10)
-        // 🌟 移除了這裡的 background，讓它融入外層膠囊
+        .padding(.vertical, 12) // 讓上下間距更平均
     }
 }
 

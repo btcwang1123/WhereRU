@@ -2,6 +2,11 @@ import SwiftUI
 
 struct ProfileView: View {
     @ObservedObject var locationManager: LocationManager
+    
+    // 🌟 就是少這兩行！必須放在這裡，按鈕才找得到它們
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("appleUserId") var appleUserId = ""
+    
     @State private var isGhostMode = false
     @State private var shareBattery = true
     
@@ -32,16 +37,25 @@ struct ProfileView: View {
                 Section {
                     Button(action: {}) {
                         Label("緊急聯絡人設定", systemImage: "cross.case.fill")
-                            .foregroundColor(.red)
+                            .foregroundColor(.red) // 警告色統一
                     }
-                    Button(action: {}) {
+                    Button(action: {
+                        // 加入微小的震動回饋，提升手感
+                        let impact = UIImpactFeedbackGenerator(style: .medium)
+                        impact.impactOccurred()
+                        
+                        // 🌟 登出邏輯：把狀態改回 false，清空資料
+                        withAnimation {
+                            isLoggedIn = false
+                            appleUserId = ""
+                        }
+                    }) {
                         Label("登出", systemImage: "rectangle.portrait.and.arrow.right")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.red)
                     }
                 }
             }
             .navigationTitle("個人設定")
-            .safeAreaPadding(.leading, 60)
         }
         .background(Color(uiColor: .systemGroupedBackground))
     }
