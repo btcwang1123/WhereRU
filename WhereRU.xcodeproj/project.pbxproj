@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C596CD5B2F9CCFBE00C8A00E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C596CD5A2F9CCFBE00C8A00E /* LocationManager.swift */; };
+		C596CD6D2F9CD52800C8A00E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C596CD6C2F9CD52800C8A00E /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C596CD3C2F9CCF1900C8A00E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +32,26 @@
 		C596CD2E2F9CCF1800C8A00E /* WhereRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C596CD3B2F9CCF1900C8A00E /* WhereRUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereRUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C596CD452F9CCF1900C8A00E /* WhereRUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereRUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C596CD5A2F9CCFBE00C8A00E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C596CD6C2F9CD52800C8A00E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C596CD592F9CCF5800C8A00E /* Exceptions for "WhereRU" folder in "WhereRU" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C596CD2D2F9CCF1800C8A00E /* WhereRU */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C596CD302F9CCF1800C8A00E /* WhereRU */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C596CD592F9CCF5800C8A00E /* Exceptions for "WhereRU" folder in "WhereRU" target */,
+			);
 			path = WhereRU;
 			sourceTree = "<group>";
 		};
@@ -43,6 +63,16 @@
 		C596CD482F9CCF1900C8A00E /* WhereRUUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WhereRUUITests;
+			sourceTree = "<group>";
+		};
+		C596CD622F9CD2BD00C8A00E /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C596CD6A2F9CD37E00C8A00E /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +105,10 @@
 		C596CD252F9CCF1800C8A00E = {
 			isa = PBXGroup;
 			children = (
+				C596CD6C2F9CD52800C8A00E /* ContentView.swift */,
+				C596CD5A2F9CCFBE00C8A00E /* LocationManager.swift */,
+				C596CD6A2F9CD37E00C8A00E /* Models */,
+				C596CD622F9CD2BD00C8A00E /* Views */,
 				C596CD302F9CCF1800C8A00E /* WhereRU */,
 				C596CD3E2F9CCF1900C8A00E /* WhereRUTests */,
 				C596CD482F9CCF1900C8A00E /* WhereRUUITests */,
@@ -109,6 +143,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				C596CD302F9CCF1800C8A00E /* WhereRU */,
+				C596CD622F9CD2BD00C8A00E /* Views */,
+				C596CD6A2F9CD37E00C8A00E /* Models */,
 			);
 			name = WhereRU;
 			packageProductDependencies = (
@@ -236,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C596CD6D2F9CD52800C8A00E /* ContentView.swift in Sources */,
+				C596CD5B2F9CCFBE00C8A00E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +438,9 @@
 				DEVELOPMENT_TEAM = 8R3YFLDYKM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereRU/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "為了確保能即時與親友分享您的動態，WhereRU 需要在背景持續取得位置。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WhereRU 需要您的位置，以便在地圖上顯示您當前的所在位置。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +473,9 @@
 				DEVELOPMENT_TEAM = 8R3YFLDYKM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereRU/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "為了確保能即時與親友分享您的動態，WhereRU 需要在背景持續取得位置。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WhereRU 需要您的位置，以便在地圖上顯示您當前的所在位置。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
